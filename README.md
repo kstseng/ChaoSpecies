@@ -15,7 +15,7 @@ Start R(studio) and copy-and-paste the commands below:
 
     #install.packages('devtools')
     library(devtools)
-    install_github('ChaoSpecies','JohnsonHsieh')
+    install_github('ChaoSpecies','ddd7975')
     library(ChaoSpecies)
 
 ### License
