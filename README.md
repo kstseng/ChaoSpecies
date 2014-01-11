@@ -2,7 +2,7 @@ ChaoSpecies
 ===========
 
 - Author: K. S. Tseng ; Y. H. Lee ; Anne Chao
-- Contributor: T. C. Hsieh
+- Contributor: K. S. Tseng
 - URL: http://chao.stat.nthu.edu.tw/blog/
 
 The purpose of this R package ChaoSpecies is mainly to provide some species estimators for both individual-based (abundance) data and sample-based (incidence) data.
