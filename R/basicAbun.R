@@ -1,5 +1,4 @@
-basicAbun <-
-function(data, k){
+basicAbun <- function(data, k){
   data <- as.numeric(data)
   
   x <- data[which(data != 0)]
