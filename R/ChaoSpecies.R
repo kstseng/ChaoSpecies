@@ -1,5 +1,6 @@
 ChaoSpecies <-
 function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
+  method <- "all"
   if (k != round(k) || k < 0) 
     stop("Error: The cutoff t to define less abundant species must be non-negative integer!")
   if (is.numeric(conf) == FALSE || conf > 1 || conf < 0) 
