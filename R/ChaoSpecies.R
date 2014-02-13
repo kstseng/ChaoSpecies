@@ -28,6 +28,6 @@ function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
       if (Q(1, dat) == sum(dat)){
         stop("Error: The information of data is not enough.")}
       return(list(Basic.Data.Information = basicInci(data, k)[[1]], Infreq.Species.Group = InfreqSpeciesGroup(data, k),
-                  Species.Table = round(SpecInciOut(data, method, k, conf), 3)))
+                  Species.Table = SpecInciOut(data, method, k, conf)))
     }
 }
