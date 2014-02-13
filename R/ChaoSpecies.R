@@ -21,13 +21,13 @@ function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
       f <- function(i, data){length(data[which(data == i)])}
       if (f(1, data) == sum(data)){
         stop("Error: The information of data is not enough.")}
-      return(list(BASIC.DATA.INFORMATION = basicAbun(data, k)[[1]], Rare.Species.Group = RareSpeciesGroup(data, k), 
-                  SPECIES.TABLE = round(SpecAbunOut(data, method, k, conf), 3)))
+      return(list(Basic.Data.Information = basicAbun(data, k)[[1]], Rare.Species.Group = RareSpeciesGroup(data, k), 
+                  Species.Table = round(SpecAbunOut(data, method, k, conf), 3)))
     } else {
       dat <- data[-1]; Q <- function(i, data){length(data[which(data == i)])}
       if (Q(1, dat) == sum(dat)){
         stop("Error: The information of data is not enough.")}
-      return(list(BASIC.DATA.INFORMATION = basicInci(data, k)[[1]], SPECIES.TABLE = SpecInciOut(data, method, k, conf)))
+      return(list(Basic.Data.Information = basicInci(data, k)[[1]], Infreq.Species.Group = InfreqSpeciesGroup(data, k)
+                  Species.Table = round(SpecInciOut(data, method, k, conf), 3)))
     }
-  return()
 }
