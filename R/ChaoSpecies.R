@@ -27,7 +27,7 @@ function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
       dat <- data[-1]; Q <- function(i, data){length(data[which(data == i)])}
       if (Q(1, dat) == sum(dat)){
         stop("Error: The information of data is not enough.")}
-      return(list(Basic.Data.Information = basicInci(data, k)[[1]], Infreq.Species.Group = InfreqSpeciesGroup(data, k)
+      return(list(Basic.Data.Information = basicInci(data, k)[[1]], Infreq.Species.Group = InfreqSpeciesGroup(data, k),
                   Species.Table = round(SpecInciOut(data, method, k, conf), 3)))
     }
 }
