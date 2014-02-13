@@ -15,7 +15,6 @@ function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
       data <- data[1, ]
     }
   }
-  method <- match.arg(method)
   data <- as.numeric(round(data))
   
   if (datatype == "abundance"){
