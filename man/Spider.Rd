@@ -1,5 +1,5 @@
-\name{Spider_data}
-\alias{Spider_data}
+\name{Spider}
+\alias{Spider}
 \docType{data}
 \title{
 Spider data
@@ -9,7 +9,7 @@ Sackett et al. (2011) provided species abundance data for samples of spiders fro
 Data from one treatments is used here for illustration: the 9 Hemlock Girdled treatment, in which bark and cambium of hemlock trees were cut and the trees
 10 left in place to die to mimic tree mortality by adelgid infestation.
 }
-\usage{data(Spider_data)}
+\usage{data(Spider)}
 \format{
   The format is: c(0, 15, 46, 2, 0, 0, 0, 1, 6, 1, ...) 
 }
@@ -18,6 +18,6 @@ Data from one treatments is used here for illustration: the 9 Hemlock Girdled tr
 Sackett, T. E., S. Record, S. Bewick, B. Baiser, N. J. Sanders, & A. M. Ellison. 2011. Response of 5 macroarthropod assemblages to the loss of hemlock (Tsuga canadensis), a foundation species.
 }
 \examples{
-data(Spider_data)
+data(Spider)
 }
 \keyword{datasets}
