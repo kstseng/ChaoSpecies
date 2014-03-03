@@ -33,22 +33,26 @@ basicAbun <- function(data, k){
 #                              sep = "="), ncol = 1)
   BASIC.DATA <- matrix(round(c(n, D, k, n_rare, D_rare, C_rare, CV_rare, CV1_rare, n_abun, D_abun),3),
                        ncol = 1)
-  colnames(BASIC.DATA) <- c("Value")
-#   rownames(BASIC.DATA) <- c("Number of observed individuals", "Number of observed species","Cut-off point",
-#                             "Number of observed in dividuals for rare species", "Number of observed species for rare species",
-#                             "Estimation of the sample converage for rare species",
-#                             "Estimation of CV for rare species in ACE", "Estimation of CV1 for rare species in ACE-1",
-#                             "Number of observed individuals for abundant species", "Number of observed species for abundant species")
-  rownames(BASIC.DATA) <- c("(Number of observed individuals)                       n        =", 
-                            "(Number of observed species)                           D        =",
-                            "(Cut-off point)                                        k        =",
-                            "(Number of observed in dividuals for rare species)     n_rare   =", 
-                            "(Number of observed species for rare species)          D_rare   =",
-                            "(Estimation of the sample converage for rare species)  C_rare   =",
-                            "(Estimation of CV for rare species in ACE)             CV_rare  =", 
-                            "(Estimation of CV1 for rare species in ACE-1)          CV1_rare =",
-                            "(Number of observed individuals for abundant species)  n_abun   =", 
-                            "(Number of observed species for abundant species)      D_abun   =")
+  #
+  nickname <- matrix(c("n", "D", "k", "n_rare", "D_rare", "C_rare", "CV_rare", "CV1_rare", "n_abun", "D_abun"),
+                     ncol = 1)
+  BASIC.DATA <- cbind(nickname, BASIC.DATA)
+  colnames(BASIC.DATA) <- c("Variable", "Value")
+  rownames(BASIC.DATA) <- c("Number of observed individuals", "Number of observed species","Cut-off point",
+                            "Number of observed in dividuals for rare species", "Number of observed species for rare species",
+                            "Estimation of the sample converage for rare species",
+                            "Estimation of CV for rare species in ACE", "Estimation of CV1 for rare species in ACE-1",
+                            "Number of observed individuals for abundant species", "Number of observed species for abundant species")
+#   rownames(BASIC.DATA) <- c("(Number of observed individuals)                       n        =", 
+#                             "(Number of observed species)                           D        =",
+#                             "(Cut-off point)                                        k        =",
+#                             "(Number of observed in dividuals for rare species)     n_rare   =", 
+#                             "(Number of observed species for rare species)          D_rare   =",
+#                             "(Estimation of the sample converage for rare species)  C_rare   =",
+#                             "(Estimation of CV for rare species in ACE)             CV_rare  =", 
+#                             "(Estimation of CV1 for rare species in ACE-1)          CV1_rare =",
+#                             "(Number of observed individuals for abundant species)  n_abun   =", 
+#                             "(Number of observed species for abundant species)      D_abun   =")
   BASIC.DATA <- data.frame(BASIC.DATA)
   return(list(BASIC.DATA, n, D, n_rare, D_rare, C_rare, CV_rare, CV1_rare, n_abun, D_abun))
 }
