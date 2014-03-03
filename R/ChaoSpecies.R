@@ -15,7 +15,7 @@ function(data, datatype = c("abundance", "incidence"), k = 10, conf = 0.95){
       data <- data[1, ]
     }
   }
-  data <- as.numeric(round(data))
+#  data <- as.numeric(round(data))
   
   if (datatype == "abundance"){
       f <- function(i, data){length(data[which(data == i)])}
