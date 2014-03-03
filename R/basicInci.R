@@ -25,10 +25,13 @@ function(data, k){
   CV_infreq <- sqrt(gamma_infreq_square)
   D_freq <- length(x[which(x > k)])
   
-  BASIC.DATA <- matrix(paste(c("D", "t", "k", "D_infreq", "C_infreq", "CV_infreq", "D_freq"),
-                             round(c(D,t,k,D_infreq,C_infreq,CV_infreq,D_freq), 3),
-                             sep = "="), ncol = 1)
-  colnames(BASIC.DATA)=c("Value")
+#   BASIC.DATA <- matrix(paste(c("D", "t", "k", "D_infreq", "C_infreq", "CV_infreq", "D_freq"),
+#                              round(c(D,t,k,D_infreq,C_infreq,CV_infreq,D_freq), 3),
+#                              sep = "="), ncol = 1)
+  BASIC.DATA <- matrix(round(c(D,t,k,D_infreq,C_infreq,CV_infreq,D_freq), 3), ncol = 1)
+  nickname <- c("D", "t", "k", "D_infreq", "C_infreq", "CV_infreq", "D_freq")
+  BASIC.DATA <- cbind(nickname, BASIC.DATA)
+  colnames(BASIC.DATA)=c("Variable", "Value")
   rownames(BASIC.DATA)=c("Number of observed species","Number of sample/quadrats","Cut-off point",
                          "Number of observed species for infrequent species","Estimated sample coverage for infrequent species",
                          "Estimated CV for infrequent species",
